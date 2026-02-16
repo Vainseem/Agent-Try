@@ -1,6 +1,9 @@
 # AI Low-Code Hub
 
-一个基于 AI 的低代码开发平台，集成了 DOM Agent（代码生成器）和 MCP Tool（工作流编辑器）。
+一个基于 AI 的低代码开发平台，其中DOM Agent仿照Google AI Studio进行编写，比较轻量，是一个个人的Agent开发尝试。
+<img width="1920" height="911" alt="2c3e47fbeb376870d8ad72e9577aaf01" src="https://github.com/user-attachments/assets/21c01de9-fb3f-44a9-acd4-84fe60a1704b" />
+
+<img width="1920" height="911" alt="d4ca7c72d12a8d5f9e8e210ca4e3d8f0" src="https://github.com/user-attachments/assets/12c94a62-33b3-40d3-b024-f9408e8467a8" />
 
 ## 🎯 功能特性
 
@@ -199,19 +202,6 @@ const nodeTypes = {
 2. **跨域问题**：如果调用外部 API 遇到 CORS 错误，需要配置代理
 3. **浏览器兼容性**：建议使用 Chrome/Edge 最新版本
 
-## 🤝 贡献指南
-
-欢迎提交 Issue 和 Pull Request！
-
-## 📄 许可证
-
-MIT License
-
-## 👨‍💻 作者
-
-AI Low-Code Hub Team
-
----
 
 **版本**：v0.1.0 Beta  
-**最后更新**：2026-02-11
+**最后更新**：2026-02-17
