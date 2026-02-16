@@ -1,0 +1,164 @@
+.mcp-tool-container {
+  height: calc(100vh - 64px);
+  padding: 16px;
+  background: #FFFFFF;
+}
+
+.workflow-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.workflow-header {
+  padding: 16px 20px;
+  background: rgb(252, 227, 238);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.workflow-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.reactflow-wrapper {
+  flex: 1;
+  height: 100%;
+  background: #fafafa;
+}
+
+.reactflow-canvas {
+  background: #fafafa;
+}
+
+/* React Flow 自定义样式 */
+.react-flow__node {
+  cursor: grab;
+}
+
+.react-flow__node.selected {
+  box-shadow: 0 0 0 3px rgba(252, 227, 238, 0.5);
+}
+
+.react-flow__edge-path {
+  stroke: rgb(252, 227, 238);
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: rgba(252, 227, 238, 0.8);
+  stroke-width: 3;
+}
+
+.react-flow__controls {
+  button {
+    background: rgb(252, 227, 238);
+    border-color: rgb(252, 227, 238);
+  }
+}
+
+.react-flow__minimap {
+  background: rgb(252, 227, 238);
+}
+
+.workflow-panel {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* 执行日志样式 */
+.execution-logs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty-logs {
+  text-align: center;
+  color: #999;
+  padding: 40px 20px;
+}
+
+.log-item {
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid;
+  background: #f9f9f9;
+}
+
+.log-item.log-running {
+  border-left-color: #1890ff;
+  background: #e6f7ff;
+}
+
+.log-item.log-success {
+  border-left-color: #52c41a;
+  background: #f6ffed;
+}
+
+.log-item.log-error {
+  border-left-color: #ff4d4f;
+  background: #fff1f0;
+}
+
+.log-item.log-warning {
+  border-left-color: #faad14;
+  background: #fffbe6;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.log-node {
+  font-weight: 600;
+  color: #333;
+}
+
+.log-time {
+  color: #999;
+}
+
+.log-message {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.log-data {
+  background: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  overflow-x: auto;
+  max-height: 200px;
+  border: 1px solid #e0e0e0;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .workflow-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}

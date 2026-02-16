@@ -1,0 +1,306 @@
+.dom-agent-container {
+  display: flex;
+  height: calc(100vh - 64px);
+  background: #FFFFFF;
+}
+
+/* 左侧聊天区 */
+.chat-pane {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e0e0e0;
+  background: #FFFFFF;
+}
+
+.chat-header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background: rgb(252, 227, 238);
+}
+
+.chat-header>div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.project-info {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.file-tabs {
+  padding: 12px 16px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.file-tabs .ant-tabs {
+  margin: 0;
+}
+
+.file-tabs .ant-tabs-nav {
+  margin: 0;
+}
+
+.file-tabs .ant-tabs-tab {
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px 4px 0 0;
+  padding: 4px 12px;
+  margin-right: 4px;
+}
+
+.file-tabs .ant-tabs-tab-active {
+  background: rgb(252, 227, 238);
+  border-color: rgb(252, 227, 238);
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.welcome-message {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.welcome-message h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.welcome-message p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.suggestions {
+  margin-top: 20px;
+}
+
+.suggestions-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.suggestion-tag {
+  cursor: pointer;
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.suggestion-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(252, 227, 238, 0.3);
+}
+
+.message {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-message .message-content {
+  background: rgb(252, 227, 238);
+  color: #333;
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.assistant-message .message-content {
+  background: #fff;
+  color: #333;
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 70%;
+  word-wrap: break-word;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.input-container {
+  padding: 16px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  gap: 12px;
+  background: #fff;
+}
+
+.input-container textarea {
+  flex: 1;
+}
+
+.workflow-info {
+  padding: 12px 16px;
+  background: #f0f0f0;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.info-section {
+  display: flex;
+  gap: 8px;
+}
+
+/* 右侧预览区 */
+.preview-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.preview-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.preview-header {
+  padding: 16px;
+  background: rgb(252, 227, 238);
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preview-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.preview-subtitle {
+  font-size: 12px;
+  color: #666;
+  font-weight: normal;
+}
+
+/* Sandpack 容器 */
+.sandpack-container {
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* 覆盖 Sandpack 默认样式 */
+.sp-layout {
+  display: block !important;
+  /* 改为 block 布局，不再是 grid/flex */
+  background: white !important;
+}
+
+.sp-stack {
+  height: 100% !important;
+}
+
+.sp-wrapper {
+  height: 100%;
+}
+
+
+
+/* 代码编辑器样式覆盖 */
+.cm-editor {
+  height: 100% !important;
+}
+
+.sp-cm {
+  height: 100% !important;
+}
+
+/* 思考过程样式 */
+.thinking-process {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(252, 227, 238, 0.1);
+  border-left: 3px solid rgb(252, 227, 238);
+  border-radius: 4px;
+}
+
+.thinking-header {
+  font-weight: 600;
+  color: rgb(252, 227, 238);
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.thinking-content {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* 响应式 */
+@media (max-width: 1200px) {
+  .dom-agent-container {
+    flex-direction: column;
+  }
+
+  .chat-pane {
+    flex: 0 0 50%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .preview-pane {
+    flex: 1;
+  }
+}
